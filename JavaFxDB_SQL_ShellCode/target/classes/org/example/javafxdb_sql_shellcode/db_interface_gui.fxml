@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="center" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxdb_sql_shellcode.DB_GUI_Controller">
+
+    <Label text="User Management System" styleClass="heading"/>
+
+    <!-- TableView to display the list of users -->
+    <TableView fx:id="userTable" prefHeight="200" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colName" text="Name" />
+            <TableColumn fx:id="colEmail" text="Email" />
+            <TableColumn fx:id="colPhone" text="Phone" />
+            <TableColumn fx:id="colAddress" text="Address" />
+        </columns>
+    </TableView>
+
+    <!-- Text fields for user inputs -->
+    <TextField fx:id="nameField" promptText="Name"/>
+    <TextField fx:id="emailField" promptText="Email"/>
+    <TextField fx:id="phoneField" promptText="Phone"/>
+    <TextField fx:id="addressField" promptText="Address"/>
+
+    <!-- Buttons for CRUD operations -->
+    <Button text="Add User" onAction="#handleAddUser"/>
+    <Button text="Edit User" onAction="#handleEditUser"/>
+    <Button text="Delete User" onAction="#handleDeleteUser"/>
+    <Button text="Refresh" onAction="#handleRefresh"/>
+
+</VBox>
+
